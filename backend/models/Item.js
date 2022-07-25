@@ -45,7 +45,7 @@ ItemSchema.methods.updateFavoriteCount = function () {
 };
 
 ItemSchema.methods.toJSONFor = function (user) {
-  if (this.image === "") {
+  if (!this.image) {
     this.image = "localhost:3000/placeholder.png";
   }
   return {
