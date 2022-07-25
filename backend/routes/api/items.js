@@ -189,7 +189,7 @@ router.put("/:item", auth.required, function (req, res, next) {
       }
 
       if (req.item.image === "") {
-        req.item.image = "localhost:3001/placeholder.png";
+        req.item.image = "localhost:3000/placeholder.png";
       }
 
       if (typeof req.body.item.tagList !== "undefined") {
